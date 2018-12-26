@@ -1,23 +1,27 @@
 import React, {Component} from 'react';
-import { Text, View} from 'react-native';
+import { Text, View, Image} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { navigationOptions } from 'react-navigation';
+
+import Header from '../Header/Header'
 
 export default class AisScreen extends Component {
 
     static navigationOptions = ({ navigation }) => {
         return {
-          tabBarLabel: 'AIS',
-          tabBarIcon: ({ tintColor }) => (
-            <Ionicons name="md-close-circle" size={25} color={tintColor}/>
-          )
+            tabBarLabel: 'AIS',
+            tabBarIcon: (
+                <Image
+                    source={require('../../assets/Ais-logo.png')}
+                    style={{width: 65, height: 30}}
+                />
+            )
         }
     };
 
     render() {
         return (
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Ionicons name="md-close-circle" size={25} color="black"/>
+            <View>
+                <Header/>
             </View>
         );
     }

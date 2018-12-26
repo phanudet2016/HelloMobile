@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { Text, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { navigationOptions } from 'react-navigation';
+
+import Header from '../Header/HeaderMenu'
 
 export default class MenuScreen extends Component {
 
@@ -9,15 +10,15 @@ export default class MenuScreen extends Component {
         return {
           tabBarLabel: 'เมนู',
           tabBarIcon: ({ tintColor }) => (
-            <Ionicons name="md-menu" size={25} color={tintColor}/>
+            <Ionicons name="md-more" size={30} color={tintColor}/>
           )
         }
     };
 
     render() {
         return (
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Ionicons name="md-close-circle" size={25} color="black"/>
+            <View>
+                <Header/>
             </View>
         );
     }

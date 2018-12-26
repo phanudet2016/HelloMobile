@@ -12,11 +12,11 @@ const TabNavigator = createBottomTabNavigator({
   AIS: { 
     screen: AisScreen 
   },
-  dtac: { 
-    screen: DtacScreen 
-  },
   True: { 
     screen: TrueScreen 
+  },
+  dtac: { 
+    screen: DtacScreen 
   },
   Menu: { 
     screen: MenuScreen
@@ -24,13 +24,19 @@ const TabNavigator = createBottomTabNavigator({
 }, {
   initialRouteName: 'Menu',
   tabBarOptions: {
-    activeTintColor: 'red',
+    activeTintColor: 'rgb(63,80,187)',
     inactiveTintColor: 'gray',
+    showLabel: false,
     labelStyle: {
       fontSize: 12,
     },
+    indicatorStyle: {
+      backgroundColor: 'transparent',
+      borderTopColor: 'rgba(119,75,151,1)',
+      borderTopWidth: 2
+    },
     style: {
-      // backgroundColor: 'rgb(91,153,236)',
+      //backgroundColor: 'rgb(91,153,236)',
     }
   }
 });

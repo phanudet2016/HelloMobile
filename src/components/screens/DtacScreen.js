@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import { BackHandler, View, ActivityIndicator} from 'react-native';
+import { Image, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+
+import Header from '../Header/Header'
 
 export default class DtacScreen extends Component {
 
@@ -8,10 +10,22 @@ export default class DtacScreen extends Component {
     // BackHandler.exitApp()
   }
 
+  static navigationOptions = ({ navigation }) => {
+    return {
+      tabBarLabel: 'AIS',
+      tabBarIcon: (
+        <Image
+          source={require('../../assets/dtac-logo.png')}
+          style={{width: 50, height: 25}}
+        />
+      )
+    }
+  };
+
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <ActivityIndicator size="large" color="#0000ff" />
+      <View>
+        <Header/>
       </View>
     );
   }

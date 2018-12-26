@@ -1,12 +1,27 @@
 import React, {Component} from 'react';
-import { Text, View} from 'react-native';
+import { Image, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+import Header from '../Header/Header'
+
 export default class TrueScreen extends Component {
+
+  static navigationOptions = ({ navigation }) => {
+    return {
+      tabBarLabel: 'AIS',
+      tabBarIcon: (
+        <Image
+          source={require('../../assets/true-logo.png')}
+          style={{width: 50, height: 20}}
+        />
+      )
+    }
+  };
+
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>TrueScreen</Text>
+      <View>
+        <Header/>
       </View>
     );
   }
